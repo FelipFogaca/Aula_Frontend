@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista CATFacts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Lista Cats Facts</h2>
+    <button onclick="carregarFacts()">Carregar Fatos sobre Gatos</button>
+
+
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Texto</th>
+            <th>Tamanho</th>
+        </thead>
+        <tbody id="fact">
+            <!--DADOS SERÃO CARREGADOS AUTOMATICAMENTE-->
+        </tbody>
+    </table>
+
+
+
+    <script>
+        let cont = 1
+        function carregarFacts() {
+            console.log("Entrou na API");
+
+            fetch("https://catfact.ninja/fact")
+                .then(response => response.json())
+                .then(data => {
+                    const tabela = document.getElementById("fact");
+                    //tabela.innerHTML = ""; //Limpar tabela
+                    const linha = `<tr> 
+                            <td>${cont}</td>   
+                            <td>${data.fact}</td> 
+                            <td>${data.length}</td>  
+                            </tr>`;
+                    tabela.innerHTML = tabela.innerHTML + linha;
+                    cont++;
+
+                })
+                .catch(error => console.error("Erro ao buscar fatos: ", error));
+        }
+    </script>
+</body>
+
+</html>

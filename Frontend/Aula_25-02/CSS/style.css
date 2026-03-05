@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #001a00;
+    padding: 16px;
+}
+
+fieldset {
+    margin-bottom: 12px;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+input {
+    margin: 4px 0;
+}
+
+button {
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+table {
+    margin-top: 12px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+}
+
+th,
+td {
+    border: 1px solid #003d00;
+    padding: 8px;
+}
+
+th {
+    text-align: Center;
+    background: #c4ffbf3f;
+}
+
+/* Modal simples de edição*/
+#editBox {
+    display: none;
+    /*Oculta o modal edição*/
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #003d00;
+    background: #c4ffbf3f;
+    max-width: 700px;
+}
+
+#editBox header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.acoes button {
+    margin-right: 6px;
+}
