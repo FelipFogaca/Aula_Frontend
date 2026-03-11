@@ -1,0 +1,139 @@
+/* Reset básico do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Variáveis de cores */
+:root {
+    --bg-color: #222118;
+    --primary-color: #EBCE07;
+}
+
+/* Centraliza o conteúdo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    /* Fundo com gradiente */
+    background: linear-gradient(135deg, #0f4ac0, #222118);
+}
+
+/* Container principal */
+.container {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 80%;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Título da página */
+.title {
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Organização dos campos na tela */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* Área dos botões */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estrutura do campo */
+.inputbox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label simples (fixa acima do campo) */
+.inputbox label {
+    font-size: 18px;
+    color:  #ffe603;
+    margin-bottom: 5px;
+}
+
+/* Campo de input */
+.inputbox input {
+    width: 100%;
+    height: 40px;
+
+    border: none;
+    outline: none;
+
+    padding: 0 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: #ebcd07c0;
+    border-radius: 4px;
+}
+
+/* Botões */
+.container button {
+    width: 200px;
+    height: 50px;
+
+    border: none;
+    cursor: pointer;
+
+    background-color: var(--primary-color);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 4px;
+}
+
+/* Tabela do histórico */
+table {
+    margin-top: 12px;
+    width: 100%;
+
+    background: #607fbd83;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+    color: var(--primary-color);
+}
+
+/* Células da tabela */
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Cabeçalho da tabela */
+th {
+    background: #EBCE07;
+}
+
+/* Botão excluir do histórico */
+td button {
+    background: #ff4d4d;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 4px;
+}
